@@ -11,8 +11,8 @@ using SuperHeldAPI.Datenzugriff;
 namespace SuperHeldAPI.Migrations
 {
     [DbContext(typeof(DatenzugriffKontext))]
-    [Migration("20220320190148_ErstelleInitiale")]
-    partial class ErstelleInitiale
+    [Migration("20220419120641_Initiale")]
+    partial class Initiale
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

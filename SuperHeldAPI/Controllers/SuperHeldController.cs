@@ -55,7 +55,7 @@ namespace SuperHeldAPI.Controllers
             return Ok(await _kontext.SuperHelden.ToListAsync());
         }
 
-        [HttpDelete("ID")]
+        [HttpDelete("{ID}")]
         public async Task<ActionResult<List<SuperHeld>>> HeldLöschen(int ID)
         {
             var dbHeld = await _kontext.SuperHelden.FindAsync(ID);

@@ -4,7 +4,7 @@
 
 namespace SuperHeldAPI.Migrations
 {
-    public partial class ErstelleInitiale : Migration
+    public partial class Initiale : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
