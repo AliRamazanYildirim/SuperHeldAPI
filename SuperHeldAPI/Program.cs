@@ -8,6 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+//! Füge die CORS-Konfiguration hinzu(Cross-Origin Resource Sharing)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("https://localhost:7140") // Ersetzen Sie dies durch die erlaubte Domäne
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
+
 //! Datenbankkontext konfigurieren
 builder.Services.AddDbContext<DatenzugriffKontext>(options =>
 {
